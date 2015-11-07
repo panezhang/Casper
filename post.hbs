@@ -21,7 +21,7 @@
         <header class="post-header">
             <h1 class="post-title">{{title}}</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY年MM月DD日 HH:mm:ss"}}</time> {{tags prefix=" on "}}
             </section>
         </header>
 
@@ -46,7 +46,7 @@
                 {{#if bio}}
                     <p>{{bio}}</p>
                 {{else}}
-                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                    <p>阅读{{name}}的<a href="{{url}}">更多文章</a>。</p>
                 {{/if}}
                 <div class="author-meta">
                     {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
@@ -56,7 +56,7 @@
 
         {{/author}}
 
-            <section class="share">
+            <section class="share hidden">
                 <h4>Share this post</h4>
                 <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -72,6 +72,9 @@
                 </a>
             </section>
 
+            <section class="post-comments">
+                <div class="ds-thread" data-thread-key="{{slug}}" data-title="{{{title}}}" data-url="{{url absolute="true"}}"></div>
+            </section>
         </footer>
 
     </article>
@@ -97,3 +100,15 @@
 </aside>
 
 {{/post}}
+
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"panezhang"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+</script>

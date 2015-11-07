@@ -765,7 +765,7 @@ body.nav-opened .nav {
 
 /* Appears in the top left corner of your home page */
 .blog-logo {
-    display: block;
+    display: none;
     float: left;
     background: none !important; /* Makes sure there is never a background */
     border: none !important; /* Makes sure there is never a border */
