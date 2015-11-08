@@ -544,7 +544,7 @@ body.nav-opened .nav-cover {
     z-index: 5;
     width: 240px;
     opacity: 0;
-    background: #111;
+    background: #413cbd;
     margin-bottom: 0;
     text-align: left;
     overflow-y: auto;
@@ -695,7 +695,7 @@ body.nav-opened .nav {
     right: 30px;
     height: 38px;
     padding: 0 20px;
-    color: #111 !important; /* Overides `.nav a:link, .nav a:visited` colour */
+    color: #413cbd !important; /* Overides `.nav a:link, .nav a:visited` colour */
     text-align: center;
     font-size: 12px;
     font-family: "Open Sans", sans-serif;
@@ -703,7 +703,7 @@ body.nav-opened .nav {
     text-decoration: none;
     line-height: 35px;
     border-radius: 3px;
-    background: #fff;
+    background: #e1e0f5;
     transition: all ease 0.3s;
 }
 .subscribe-button:before {
@@ -836,8 +836,8 @@ body.nav-opened .nav {
 /* When the navigation is opened */
 .nav-opened .menu-button {
     padding: 0 12px;
-    background: #111;
-    border-color: #111;
+    background: #413cbd;
+    border-color: #413cbd;
     color: #fff;
     -webkit-transform: translate3D(94px, 0, 0);
         -ms-transform: translate3D(94px, 0, 0);
